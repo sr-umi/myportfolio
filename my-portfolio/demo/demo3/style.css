@@ -1,0 +1,287 @@
+@charset "UTF-8";
+.flex {
+  display: flex;
+}
+
+.almarai {
+  font-family: "Almarai", sans-serif;
+  font-weight: 700;
+}
+
+/* スムーススクロール */
+/* html {
+    scroll-behavior: smooth;
+} */
+header {
+  align-items: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+header .gnavi {
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 24px;
+  color: #fff;
+  font-size: 13px;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.24);
+  z-index: 1;
+}
+header .gnavi li {
+  margin: 0 16px;
+}
+header .gnavi li a {
+  text-decoration: none;
+}
+header .gnavi li a:hover {
+  color: red;
+  transition: all 0.5s;
+}
+
+@media screen and (max-width: 767px) {
+  header .gnavi {
+    justify-content: center;
+  }
+}
+.hero-wrap {
+  position: relative;
+  background: center/cover url(images/cafe.jpg) no-repeat;
+}
+.hero-wrap::before {
+  content: "";
+  display: block;
+  padding-top: 66.66%;
+}
+.hero-wrap .site-name {
+  color: #fff;
+  font-size: 150px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .hero-wrap .site-name {
+    font-size: 80px;
+  }
+}
+/* ボタン */
+.home-button p {
+  width: 96px;
+  height: 96px;
+  font-size: 16px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  position: fixed;
+  /* 固定 */
+  bottom: 1rem;
+  right: 1rem;
+  line-height: 88px;
+  text-align: center;
+  transition: all 0.4s;
+  z-index: 1;
+}
+.home-button p:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+section {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.title-wrap {
+  background-image: url(images/menu.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-wrap.menu {
+  background-image: url(images/menu.jpg);
+}
+
+.title-wrap.about {
+  background-image: url(images/about.jpg);
+}
+
+.title-wrap.location {
+  background-image: url(images/location.jpg);
+}
+
+@media screen and (max-width: 767px) {
+  .title-wrap {
+    height: 200px;
+  }
+}
+h2.title {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 72px;
+}
+
+@media screen and (max-width: 767px) {
+  h2.title {
+    font-size: 40px;
+  }
+}
+h3 {
+  font-size: 40px;
+}
+
+.sec-menu .menu-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.sec-menu .menu-content .sub-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.sec-menu .menu-content .sub-content:first-child::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #000;
+}
+.sec-menu .menu-content .sub-content .menu-item {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.sec-menu .menu-content .sub-content .menu-item .sub-title {
+  display: inline-block;
+  border-bottom: solid red 5px;
+  padding-bottom: 8px;
+}
+.sec-menu .menu-content .sub-content .menu-item dl {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding: 0 30px;
+}
+.sec-menu .menu-content .sub-content .menu-item dl dt {
+  text-align: left;
+  /* 四則演算を使えるようにする */
+  width: calc(100% - 64px);
+  border-bottom: dotted #000 1px;
+}
+.sec-menu .menu-content .sub-content .menu-item dl dd {
+  width: 64px;
+}
+
+@media screen and (max-width: 767px) {
+  .sec-menu .menu-content .sub-content:first-child::after {
+    content: none;
+  }
+  .sec-menu .menu-content .sub-content .menu-item {
+    margin-bottom: 80px;
+  }
+}
+.sec-about .about-content {
+  width: 100%;
+  margin-top: 80px;
+  /*About内のボタン*/
+}
+.sec-about .about-content ul.about-main {
+  margin: 40px auto 0;
+}
+.sec-about .about-content .btn {
+  margin-top: 40px;
+  position: relative;
+  color: #333;
+  padding: 16px 40px;
+  font-size: 14px;
+  /*hoverした時の線の形状*/
+}
+.sec-about .about-content .btn:hover {
+  color: #cc0000;
+  transition: all 0.4s;
+}
+.sec-about .about-content .btn::before {
+  content: "";
+  position: absolute;
+  border: solid #cc0000;
+  width: 24px;
+  height: 16px;
+  transition: all 0.3s ease-in-out;
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+.sec-about .about-content .btn::after {
+  content: "";
+  position: absolute;
+  border: solid #cc0000;
+  width: 24px;
+  height: 16px;
+  transition: all 0.3s ease-in-out;
+  bottom: 0;
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+.sec-about .about-content .btn:hover::before, .sec-about .about-content .btn:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #cc0000;
+  border-radius: 8px;
+}
+
+.sec-location .location-content {
+  width: 100%;
+  text-align: center;
+  margin-top: 80px;
+}
+.sec-location .location-content .map {
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+  overflow: hidden;
+}
+.sec-location .location-content .map::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+.sec-location .location-content .map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.sec-location .location-content .info {
+  font-size: 14px;
+  margin-top: 40px;
+}
+.sec-location .location-content .info .address {
+  font-size: 16px;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10%;
+  font-size: 12px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* レイアウト ここから */
+.flex {
+  display: flex;
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* レイアウト ここまで */
+body {
+  margin: 0 auto;
+  font-family: "Zen Old Mincho", serif;
+}
+
+header {
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+  margin-top: 48px;
+}
+header h1 {
+  font-size: 40px;
+  margin-bottom: 48px;
+}
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+header nav .gnavi {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
+}
+header nav .gnavi li {
+  width: 50%;
+  list-style: none;
+  font-size: 12px;
+  margin-bottom: 32px;
+}
+header nav .gnavi li a {
+  padding-left: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+header nav .login {
+  width: 120px;
+  list-style: none;
+  font-size: 12px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav .login li a {
+  text-decoration: none;
+  color: #333;
+}
+header nav::after {
+  content: "";
+  width: 960px;
+  height: 0.4px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width: 991px) {
+  header h1 {
+    margin-bottom: 0;
+  }
+  header nav {
+    display: none;
+  }
+}
+/* ボタン */
+.home-button p {
+  width: 96px;
+  height: 96px;
+  font-size: 16px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #333;
+  position: fixed; /* 固定 */
+  bottom: 1rem;
+  right: 1rem;
+  line-height: 88px;
+  text-align: center;
+  transition: all 0.4s;
+  z-index: 1;
+}
+.home-button p:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+section {
+  justify-content: space-between;
+  margin-top: 96px;
+}
+section .group-left img {
+  width: 100%;
+}
+section .group-right {
+  padding-left: 6%;
+  font-size: 16px;
+}
+section .group-right .no-name-title {
+  font-size: 24px;
+  border-top: 0.4px solid #000;
+  border-bottom: 0.4px solid #000;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+section .group-right p {
+  font-size: 12px;
+  line-height: 20px;
+}
+section .group-right .money {
+  margin-top: 32px;
+}
+section .group-right .order-table {
+  margin-top: 32px;
+  width: 100%;
+}
+section .group-right .order-table tr {
+  width: 100%;
+  font-size: 12px;
+}
+section .group-right .order-table tr td, section .group-right .order-table tr th {
+  border: 1px solid #000;
+  width: 50%;
+}
+section .group-right .order-table tr .color, section .group-right .order-table tr .size, section .group-right .order-table tr .space {
+  text-align: center;
+  padding: 8px 8px;
+}
+section .group-right .order-table tr .color, section .group-right .order-table tr .size {
+  width: 20%;
+}
+section .group-right .order-table tr .space {
+  width: 60%;
+}
+section .group-right .order-table tr .space select {
+  width: 100%;
+  -webkit-appearance: menulist;
+     -moz-appearance: menulist;
+          appearance: menulist;
+  border: solid 0.4px rgb(128, 126, 126);
+}
+section .group-right .cart-btn {
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  margin-top: 1rem;
+  padding: 16px 0;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  border: 1px solid #333;
+  text-decoration: none;
+}
+section .group-right .cart-btn:hover {
+  border: 1px solid #333;
+  transition: all 0.4s;
+  background-color: #fff;
+  color: #333;
+}
+section .group-right .size-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+section .group-right .size-table tr {
+  margin: auto;
+}
+section .group-right .size-table tr th {
+  text-align: center;
+  padding: 12px;
+  width: 16px;
+  background-color: #e0e0e0;
+  border: 1px solid #333;
+}
+section .group-right .size-table tr td {
+  text-align: center;
+  padding: 12px;
+  width: 28px;
+  border: 1px solid #333;
+  font-size: 12px;
+}
+section .group-right .size-table tr .size {
+  width: 16px;
+}
+section .group-right .size-table tr .chest .weist .height {
+  width: 28px;
+}
+
+@media screen and (max-width: 767px) {
+  section {
+    margin-top: 48px;
+  }
+}
+footer .copyright {
+  margin-top: 96px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 10px;
+}/*# sourceMappingURL=style.css.map */
